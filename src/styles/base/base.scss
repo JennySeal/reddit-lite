@@ -1,0 +1,28 @@
+* {font-family: 'Roboto Slab', sans-serif;}
+
+
+html {
+font-size: 62.5%;
+margin: 0;
+padding: 0;
+}
+
+.container {
+    width: 58vw;
+    border-radius: 10px;
+    margin-left: 23vw;
+    min-height: 100vh;
+    align-items:flex-start;
+    border: 0.75vw solid $secondColor;
+    box-shadow: 0.25vw 0.25vw silver;
+}
+
+body {
+
+background-color: whitesmoke;
+
+}
+
+button {
+cursor: pointer;
+}

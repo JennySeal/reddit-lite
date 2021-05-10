@@ -2,7 +2,7 @@ import React from 'react'
 
 const Story = () => {
     return (
-        <div>
+        <div className="story">
             <p>Here is a Reddit Story For You</p>
         </div>
     )
