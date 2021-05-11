@@ -8,10 +8,10 @@ import './styles/styles.scss'
 import {useDispatch} from 'react-redux';
 import {fetchingStories, gotStories, fetchStoriesFailed} from './features/stories/storiesSlice';
 
-const API_ENDPOINT = 'https://www.reddit.com/search.json?q='
+const API_ENDPOINT = 'https://www.reddit.com/search.json?limit=50&q='
 
 const App = () => {
-  const [searchTerm, setSearchTerm] = useState('gabriel dawe');
+  const [searchTerm, setSearchTerm] = useState('contemporary art');
   const [url, setUrl] = useState(`${API_ENDPOINT}${searchTerm}`);
   const dispatch = useDispatch(); 
   
@@ -27,13 +27,17 @@ dispatch(fetchStoriesFailed));
 useEffect(() => {
   handleFetchStories();}, [handleFetchStories])
 
+const updateSearchTerm = (e) => {
+ setSearchTerm(e.currentTarget.value)
+ setUrl(`${API_ENDPOINT}${searchTerm}`)
+}
 
   return (
     <div className='outerContainer'>
     <Header/>
-    <Search searchTerm={searchTerm} />
+    <Search searchTerm={searchTerm} updateSearchTerm={updateSearchTerm} />
     <div className='innerContainer'>
-    <Sidebar/>
+    <Sidebar updateSearchTerm={updateSearchTerm}/>
     <Story/>
     </div>
     </div>

@@ -6,8 +6,8 @@ const header = () => {
         <header>
             <img src={RedditLogo} alt="Reddit Logo - Smiley alien face"/>
             <div className="titles">
-            <h1>Reddit Lite</h1>
-            <h2>For the top issues on the internet</h2>
+            <h1>Reddit Art</h1>
+            <h2>For checking out the latest art news on the internet</h2>
             </div>
             </header>
     )

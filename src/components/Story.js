@@ -7,15 +7,18 @@ import RedditLogo from './RedditLogo.png'
 const Story = () => {
     const stories = useSelector(selectStories);
     const error = stories.isError;
-    const storyChildren = stories.data.data.children;
+    const loading = stories.isLoading;
+
+    const storyChildren = (stories.data !== undefined) ? stories.data.data.children : [];        
 
 
         
     return (
         <div className="storyContainer">
+        {(loading) ? <p>Tick tick tick tick boom! Sorry you are waiting</p> : <p></p>}
         {(error) ? <p>So sorry, the loading went wrong!</p> : <p>Here are some Reddit Stories For You</p>}
         <div className="stories">
-        {storyChildren.map((story) => 
+        {storyChildren.filter(story => story.data.post_hint === 'image' && !story.data.over_18).map((story) => 
         <div key={story.data.id} className="story">
         <div className="storyText">
         <h3>{story.data.title}</h3>
@@ -32,7 +35,7 @@ const Story = () => {
        } } /></p>
         </div>
         )}
-        </div>   
+        </div>      
          </div>
     )
 }

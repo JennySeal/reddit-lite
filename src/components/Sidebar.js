@@ -1,13 +1,15 @@
 import React from 'react'
 
-const Sidebar = () => {
+const Sidebar = ({updateSearchTerm}) => {
     return (
         <aside>
-            <button>Gabriel Dawe</button>
-            <button>Yayoi Kusama</button>
-            <button>Takashi Murakami</button>
-            <button>Anish Kapoor</button>
-            <button>Jean-Michel Basquiat</button>
+            <button type="submit" id="Gabriel Dawe" value="Gabriel Dawe" onClick={updateSearchTerm}> Gabriel Dawe</button>
+            <button type="submit" id="Yayoi Kusama" value="Yayoi Kusama" onClick={updateSearchTerm}>Yayoi Kusama</button>
+            <button id="Takashi Murakami" value="Takashi Murakami" onClick={updateSearchTerm}>Takashi Murakami</button>
+            <button id="Christopher Wool" value="Christopher Wool" onClick={updateSearchTerm}>Christopher Wool</button>
+            <button id="Cecily Brown" value="Cecily Brown" onClick={updateSearchTerm}>Cecily Brown</button>
+            <button id="Banksy" value="Banksy" onClick={updateSearchTerm}>Banksy</button>
+            <button id="Damien Hirst" value="Damien Hirst" onClick={updateSearchTerm}>Damien Hirst</button>
         </aside>
     )
 }
