@@ -1,7 +1,13 @@
 input   {
-    border-radius: 5px;
-    border: 2px solid $secondColor;
+    border: none;
+    border-right: 1vw solid $secondColor;
     margin: 1vw;
+    min-height: 2vw;
+    margin-left: 69vw;
     font-size: $medium-size;
-    color: $mainColor;
+    color: white;
+    font-weight: bold;
+    width: 20vw;
+    background-color: orangered;
+
 }

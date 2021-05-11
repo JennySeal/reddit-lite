@@ -1,0 +1,21 @@
+aside {
+    max-width: 20vw;
+    display: flexbox;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+button  {
+    min-width: 15vw;
+    padding: 1vw;
+    margin-left: 2vw;
+    margin-top: 1.2vw;
+    background-color: $secondColor;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-left: 1vw solid $mainColor;
+    border-radius: 5px;
+    font-size: $medium-size;
+}

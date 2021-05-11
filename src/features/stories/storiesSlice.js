@@ -39,6 +39,6 @@ export const storiesSlice = createSlice({
 })
 
 
-export const selectStories = state => state.stories.data;
+export const selectStories = state => state.stories;
 export const {fetchingStories, gotStories, fetchStoriesFailed, removeStory} = storiesSlice.actions;
 export default storiesSlice.reducer;

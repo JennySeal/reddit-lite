@@ -2,6 +2,7 @@ import React, {useState, useCallback, useEffect} from 'react'
 import Header from './components/Header';
 import Search from './components/Search';
 import Story from './components/Story';
+import Sidebar from './components/Sidebar';
 import axios from 'axios';
 import './styles/styles.scss'
 import {useDispatch} from 'react-redux';
@@ -10,7 +11,7 @@ import {fetchingStories, gotStories, fetchStoriesFailed} from './features/storie
 const API_ENDPOINT = 'https://www.reddit.com/search.json?q='
 
 const App = () => {
-  const [searchTerm, setSearchTerm] = useState('pizza');
+  const [searchTerm, setSearchTerm] = useState('gabriel dawe');
   const [url, setUrl] = useState(`${API_ENDPOINT}${searchTerm}`);
   const dispatch = useDispatch(); 
   
@@ -28,10 +29,13 @@ useEffect(() => {
 
 
   return (
-    <div className='container'>
+    <div className='outerContainer'>
     <Header/>
     <Search searchTerm={searchTerm} />
+    <div className='innerContainer'>
+    <Sidebar/>
     <Story/>
+    </div>
     </div>
   )
 }

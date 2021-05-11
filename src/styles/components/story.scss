@@ -1,6 +1,49 @@
-.story  {
-    padding: 1vw;
+.storyContainer {
+    width: 75%;
     font-size: $medium-size;
-    color: $mainColor;
-    font-weight: 600;
 }
+
+.stories {
+    font-size: $large-size;
+    color: $mainColor;
+    font-weight: 500;
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    }
+
+.story  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 3vh;
+    padding-left: 1vw;
+    width: 88vw;
+    line-height: $large-size;
+    border-left: 0.25rem solid darkcyan;
+    }
+
+.storyText {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+}
+
+.story p {
+    color: darkcyan;
+    font-size: $small-size;
+    font-weight: bold; 
+    text-align: right;
+}
+
+.story h3{
+    font-size: $large-size;
+}
+
+.story li {
+    font-size: $medium-size;
+}
+
+.story img  {max-height: 60vh;}
