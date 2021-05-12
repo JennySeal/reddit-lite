@@ -1,13 +1,33 @@
-input   {
-    border: none;
+.search  {
+    background-image: url('./../../Texture.jpg');
+    background-size: 100%;
+    width: 88.5vw;
     border-right: 1vw solid $secondColor;
-    margin: 1vw;
+    border-left: 1vw solid $secondColor;
+}
+
+
+
+input   {
+    border: 5px solid white;
+    border-right: 1vw solid $secondColor;
     min-height: 2vw;
-    margin-left: 69vw;
+    margin-left: 67vw;
     font-size: $medium-size;
     color: white;
     font-weight: bold;
     width: 20vw;
-    background-color: orangered;
+    background-color: $mainColor;
+    text-align: right;
 
+}
+
+.right-aligned  {
+    float: right;
+    background-color: $mainColor;
+    color: $secondColor;
+    border: 5px solid white;
+    border-right: 1vw solid $secondColor;
+    padding: 0;
+    margin-bottom: 0.2rem;
 }

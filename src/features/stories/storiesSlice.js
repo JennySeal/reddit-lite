@@ -29,14 +29,13 @@ export const storiesSlice = createSlice({
         },
         removeStory: (state, action) => {
             return {
-                ...state.stories, 
-                data: state.stories.data.filter(
-                    story => action.payload.objectID !== story.objectID
-                )
-            }
+                ...state,
+                isLoading: false, 
+                isError: false, 
+                children: state.data.data.children.filter(story => story.data.id !== action.payload)
         }
     }
-})
+}})
 
 
 export const selectStories = state => state.stories;

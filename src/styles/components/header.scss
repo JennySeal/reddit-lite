@@ -1,7 +1,5 @@
 header  {
     background-color: $mainColor;
-    background-image: url('./../../Texture.jpg');
-    background-size: cover;
     color: white;
     padding: 1vw;
     width: 86.5vw;
@@ -17,7 +15,6 @@ header img  {
 
 .titles    {
     float: left;
-    background-color: orangered;
     padding: 1vw;
 }
 
@@ -28,5 +25,5 @@ header h1   {
 }
 
 header h2   {
-    font-size: $medium-size;
+    font-size: $large-size;
 }

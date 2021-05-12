@@ -1,10 +1,11 @@
 import React from 'react';
 
-const Search = ({searchTerm, updateSearchTerm}) => {
+const Search = ({searchTerm, updateSearchTerm, onSearchSubmit}) => {
     return (
-        <div>
-            <input type="text" value={searchTerm} placeholder="search" name="search" onInput={updateSearchTerm}/>
-        </div>
+            <form className="search" onSubmit={onSearchSubmit}>
+            <input type="text" value={searchTerm} name="search" onInput={updateSearchTerm}/>
+            <button className="right-aligned" type="submit" >Submit</button>
+            </form>
     )
 }
 
