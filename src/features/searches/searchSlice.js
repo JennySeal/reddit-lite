@@ -1,11 +1,13 @@
 import {createSlice} from '@reduxjs/toolkit';
 
 
+const initialState = {searchTerm: "search art"}
+
 export const searchSlice = createSlice({
     name: 'searches',
-    initialState: {searchTerm: "contemporary art"},
+    initialState,
     reducers: {
-        selectArtist:(state, action) => {
+        updateSearch:(state, action) => {
             return {
                 ...state.searches,
                 searchTerm: action.payload
@@ -16,6 +18,6 @@ export const searchSlice = createSlice({
 })
 
 
-export const selectSearches = state => state.searches;
-export const {selectArtist} = searchSlice.actions;
+export const selectSearches = state => state.searches.searchTerm;
+export const {updateSearch} = searchSlice.actions;
 export default searchSlice.reducer;

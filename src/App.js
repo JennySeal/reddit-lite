@@ -1,18 +1,20 @@
-import React, {useState, useCallback, useEffect} from 'react'
+import React, {useCallback, useEffect} from 'react'
 import Header from './components/Header';
 import Search from './components/Search';
 import Story from './components/Story';
 import Sidebar from './components/Sidebar';
 import axios from 'axios';
 import './styles/styles.scss'
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {fetchingStories, gotStories, fetchStoriesFailed, removeStory} from './features/stories/storiesSlice';
+import {updateSearch} from './features/searches/searchSlice';
+import {selectSearches} from './features/searches/searchSlice';
 
 const API_ENDPOINT = 'https://www.reddit.com/search.json?limit=50&q='
 
 const App = () => {
-  const [searchTerm, setSearchTerm] = useState('search art');
-  const [url, setUrl] = useState(`${API_ENDPOINT}${searchTerm}`);
+  const searchTerm = useSelector(selectSearches);
+  const url = `${API_ENDPOINT}${searchTerm}`;
   const dispatch = useDispatch(); 
   
   const handleFetchStories = useCallback(() => {
@@ -27,28 +29,21 @@ dispatch(fetchStoriesFailed));
 useEffect(() => {
   handleFetchStories();}, [handleFetchStories])
 
-const updateSearchTerm = (e) => {
-  console.log(e.currentTarget)
- setSearchTerm(e.currentTarget.value)
- e.preventDefault();
-}
 
 const handleRemove = useCallback((id) => {
   dispatch(removeStory(id))},[dispatch]);
 
 const onSearchSubmit = useCallback((event) => {
-  setSearchTerm(event.currentTarget.value)
-  setUrl(`${API_ENDPOINT}${searchTerm}`)
-  console.log(searchTerm);
+  dispatch(updateSearch(event.currentTarget.value))
   event.preventDefault();
-},[searchTerm]);
+},[dispatch]);
 
   return (
     <div className='outerContainer'>
     <Header/>
-    <Search searchTerm={searchTerm} updateSearchTerm={updateSearchTerm} onSearchSubmit={onSearchSubmit}/>
+    <Search searchTerm={searchTerm} onSearchSubmit={onSearchSubmit}/>
     <div className='innerContainer'>
-    <Sidebar updateSearchTerm={updateSearchTerm} onSearchSubmit={onSearchSubmit}/>
+    <Sidebar onSearchSubmit={onSearchSubmit}/>
     <Story handleRemove={handleRemove}/>
     </div>
     </div>

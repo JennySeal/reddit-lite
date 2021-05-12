@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Sidebar = ({updateSearchTerm, onSearchSubmit}) => {
+const Sidebar = ({onSearchSubmit}) => {
     return (
         <aside>
         <form onSubmit={onSearchSubmit}>
