@@ -1,5 +1,6 @@
 .storyContainer {
-    width: 75%;
+    margin-top: 2vw;
+    width: 60%;
     font-size: $medium-size;
 }
 
@@ -21,7 +22,7 @@
     padding-left: 1vw;
     width: 88vw;
     line-height: $large-size;
-    border-left: 0.25rem solid darkcyan;
+    box-shadow: 0 0 15px $mainColor;
     }
 
 .storyText {
@@ -33,15 +34,15 @@
 }
 
 .story p {
-    color: darkcyan;
+    color: $secondColor;
     font-size: $small-size;
     font-weight: bold; 
     text-align: right;
 }
 
 .story h3{
-    font-size: $large-size;
-    max-width: 30vw;
+    font-size: $medium-size;
+    max-width: 20vw;
 }
 
 .story li {
@@ -63,3 +64,11 @@
     border-radius: 5px;
     font-size: $small-size;
 }
+
+.tag    {border-right: 0.5rem solid $secondColor;
+        border-radius: 5px;
+        background-color: $mainColor;
+        padding: 0.5rem;
+        color: white;
+        font-weight: bold;
+        }

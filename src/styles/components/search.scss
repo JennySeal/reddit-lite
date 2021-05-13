@@ -1,9 +1,5 @@
 .search  {
-    background-image: url('./../../Texture.jpg');
-    background-size: 100%;
-    width: 88.5vw;
-    border-right: 1vw solid $secondColor;
-    border-left: 1vw solid $secondColor;
+    grid-column: 4/6;
 }
 
 
@@ -12,20 +8,22 @@ input   {
     border: 5px solid white;
     border-right: 1vw solid $secondColor;
     min-height: 2vw;
-    margin-left: 67vw;
     font-size: $medium-size;
     color: white;
     font-weight: bold;
     width: 20vw;
     background-color: $mainColor;
-    text-align: right;
+    text-align: right;  
+}
 
+input::placeholder {
+    color: white; 
 }
 
 .right-aligned  {
     float: right;
     background-color: $mainColor;
-    color: $secondColor;
+    color: white;
     border: 5px solid white;
     border-right: 1vw solid $secondColor;
     padding: 0;

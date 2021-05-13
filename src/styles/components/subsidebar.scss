@@ -1,26 +1,26 @@
-aside p {font-size: $medium-size;
+.asideSub p {font-size: $medium-size;
         text-align: center;
         color: $secondColor;
         font-weight: bold;}
 
-aside {
-    max-width: 20vw;
+.asideSub {
+    max-width: 19vw;
     display: flexbox;
     flex-direction: column;
     justify-content: center;
-    margin-right: 1vw;
+    margin-left: 1vw;
 }
 
-button  {
+.buttonSub  {
     min-width: 15vw;
     padding: 0.8vw;
     margin-left: 2vw;
     margin-top: 1vw;
-    background-color: $secondColor;
-    color: white;
+    background-color: $thirdColor;
+    color: $mainColor;
     font-weight: bold;
     border: none;
-    border-left: 1vw solid $mainColor;
+    border-right: 1vw solid $mainColor;
     border-radius: 5px;
     font-size: $medium-size;
     

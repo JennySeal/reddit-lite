@@ -1,12 +1,11 @@
 import React from 'react';
 
-const Search = ({searchTerm, updateSearchTerm, onSearchSubmit}) => {
+const Search = ({onHandleSearch}) => {
     return (
-            <form className="search" onSubmit={onSearchSubmit}>
-            <input type="text" name="search" onChange={updateSearchTerm}/>
-            <button className="right-aligned" type="submit" >Submit</button>
+        <form className="search" >
+            <input type="text" id="search-input" placeholder="search art" onInput={onHandleSearch}/>     
             </form>
-    )
+            )
 }
 
 export default Search

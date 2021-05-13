@@ -2,28 +2,34 @@ header  {
     background-color: $mainColor;
     color: white;
     padding: 1vw;
-    width: 86.5vw;
+    width: 86.75vw;
     text-align: left;
     border-left: 1vw solid $secondColor;
     border-right: 1vw solid $secondColor;
+    border-bottom: 1vw solid white;
+    height: 25vh;
+    display: grid;
+    grid-template-columns: 6/1fr;
+    grid-template-rows: 3/1fr;
 }
 
 header img  {
     max-width: 10vw;
-    float: right;
+    grid-column: 1/1;
+    grid-row: 1/4;
 }
 
 .titles    {
-    float: left;
     padding: 1vw;
+    grid-column: 6/6;
+    line-height: 0.5;
 }
 
 header h1   {
     font-size: $xl-size;
     font-weight: bold;
-
 }
 
-header h2   {
-    font-size: $large-size;
+header h3   {
+    font-size: $medium-size;
 }
