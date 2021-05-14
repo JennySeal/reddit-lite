@@ -1,0 +1,22 @@
+.fullStory  {   
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 3vh;
+    padding-left: 2vw;
+    width: 54vw;
+    line-height: $large-size;
+    box-shadow: 0 0 15px $mainColor;
+    }
+
+.fullStory img  {max-width: 95%;
+        padding: 1vw;}
+
+.fullStory .comment  {
+    font-weight: bold;
+    margin: 1vw;
+    max-width: 54vw;
+    font-style: italic;
+    border-bottom: 1px solid $mainColor;
+    padding: 1vw;
+}

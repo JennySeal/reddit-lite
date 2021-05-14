@@ -1,7 +1,11 @@
 .storyContainer {
     margin-top: 2vw;
-    width: 60%;
+    width: 56vw;
     font-size: $medium-size;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 
 .stories {
@@ -13,14 +17,14 @@
     flex-direction: row;
     }
 
-.story  {
+.story  {   
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 3vh;
     padding-left: 1vw;
-    width: 88vw;
+    width: 54vw;
+    min-height: 50vh;
     line-height: $large-size;
     box-shadow: 0 0 15px $mainColor;
     }
@@ -35,14 +39,13 @@
 
 .story p {
     color: $secondColor;
-    font-size: $small-size;
+    font-size: $medium-size;
+    line-height: normal;
     font-weight: bold; 
-    text-align: right;
-}
+    text-align: left;}
 
 .story h3{
     font-size: $medium-size;
-    max-width: 20vw;
 }
 
 .story li {
@@ -50,16 +53,18 @@
     list-style-type: none;
 }
 
-.story img  {max-width: 30vw;}
+.story img  {max-width: 25vw;
+    padding-right: 1vw;}
+
 
 
 .small-button  {
     min-width: 10vw;
     padding: 0.5vw;
     background-color: $secondColor;
-    color: $mainColor;
+    color: white;
     border: none;
-    margin: 0;
+    margin-bottom: 1vw;
     border-left: 1vw solid $mainColor;
     border-radius: 5px;
     font-size: $small-size;
