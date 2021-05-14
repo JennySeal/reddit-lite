@@ -4,8 +4,6 @@
     font-size: $medium-size;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
 }
 
 .stories {
@@ -20,13 +18,13 @@
 .story  {   
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     margin-bottom: 3vh;
     padding-left: 1vw;
     width: 54vw;
     min-height: 50vh;
     line-height: $large-size;
     box-shadow: 0 0 15px $mainColor;
+    justify-content: space-between;
     }
 
 .storyText {
@@ -34,7 +32,7 @@
     flex-direction: column;
     align-content: flex-start;
     justify-content: flex-start;
-
+    padding: 0.5vw;
 }
 
 .story p {
@@ -53,21 +51,19 @@
     list-style-type: none;
 }
 
-.story img  {max-width: 25vw;
+.story img  {max-width: 27vw;
     padding-right: 1vw;}
 
-
-
-.small-button  {
-    min-width: 10vw;
-    padding: 0.5vw;
-    background-color: $secondColor;
-    color: white;
+.yellow-button  {
+    background-color: $thirdColor;
+    color: $mainColor;
+    min-width: 15vw;
     border: none;
+    padding: 1vw;
     margin-bottom: 1vw;
     border-left: 1vw solid $mainColor;
-    border-radius: 5px;
     font-size: $small-size;
+    margin-left: 0;
 }
 
 .tag    {border-right: 0.5rem solid $secondColor;

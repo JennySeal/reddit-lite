@@ -16,8 +16,8 @@ console.log(fullstory)
             <img src={dataItem.data.children[0].data.url_overridden_by_dest} alt=""/>
             {dataItem.data.children[0].data.num_comments &&<p>Number of comments: {dataItem.data.children[0].data.num_comments}</p>}
             {dataItem.data.children.map((comment)=>
-                <ul>{comment.data.body && <li className="comment">"{comment.data.body}"
-                {comment.data.author}</li>}</ul>)}
+                comment.data.body && <ul><li className="comment">"{comment.data.body}"
+                &nbsp; <span className="author">from &nbsp;  {comment.data.author}</span></li></ul>)}
             </div>)}
             
         </div>

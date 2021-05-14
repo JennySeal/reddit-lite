@@ -5,7 +5,7 @@ const StoryPage = ({id, onSearchSubmit}) => {
         
     return (
         <form onSubmit={onSearchSubmit}>
-        <button className="small-button" value={pageId} onClick={onSearchSubmit}>Click here to open story</button> 
+        <button className="yellow-button" value={pageId} onClick={onSearchSubmit}>Click here to open story</button> 
         </form>
     )
 }
