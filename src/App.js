@@ -11,12 +11,12 @@ import {updateSearch} from './features/searches/searchSlice';
 import {selectSearches} from './features/searches/searchSlice';
 
 
-const API_ENDPOINT = 'https://www.reddit.com/search.json?limit=50&q='
+const API_ENDPOINT = 'https://www.reddit.com/'
 
 const App = () => {
   const searchTerm = useSelector(selectSearches);
-  let search = searchTerm;
   const url = `${API_ENDPOINT}${searchTerm}`;
+
   const dispatch = useDispatch(); 
   
   const handleFetchStories = useCallback(() => {
@@ -33,26 +33,19 @@ useEffect(() => {
 
 
 const onSearchSubmit = useCallback((event) => {
-  console.log('you got here')
-  dispatch(updateSearch(event.currentTarget.value))
   event.preventDefault();
+  console.log(event.currentTarget.value)
+  dispatch(updateSearch(event.currentTarget.value))
+  
 },[dispatch]);
-
-const onHandleSearch = useCallback((event) => {
-  if (event.keyCode === 13) {
-    event.preventDefault()
-    dispatch(updateSearch(event.currentTarget.value))
-  } else {
-    console.log('handling search');
-  }},[dispatch]);
 
 
   return (
     <div className='outerContainer'>
-    <Header searchTerm={search} onSearchSubmit={onHandleSearch}/>
+    <Header/>
     <div className='innerContainer'>
     <Sidebar onSearchSubmit={onSearchSubmit}/>
-    <Story/>
+    <Story onSearchSubmit={onSearchSubmit}/>
     <SubSidebar onSearchSubmit={onSearchSubmit}/>
     </div>
     </div>

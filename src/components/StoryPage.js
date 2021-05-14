@@ -1,0 +1,15 @@
+import React from 'react'
+
+const StoryPage = ({id, onSearchSubmit}) => {
+    console.log(id)
+    console.log(onSearchSubmit)
+    const pageId = `/${id}.json`
+        
+    return (
+        <form onSubmit={onSearchSubmit}>
+        <button className="button" value={pageId} onClick={onSearchSubmit}>Click here to open story</button> 
+        </form>
+    )
+}
+
+export default StoryPage

@@ -14,6 +14,13 @@ input   {
     width: 20vw;
     background-color: $mainColor;
     text-align: right;  
+    margin-bottom: 3vw;
+}
+
+.searchIcon {
+    font-size: 4em;
+    align-self: flex-end;
+    justify-self: flex-end;
 }
 
 input::placeholder {

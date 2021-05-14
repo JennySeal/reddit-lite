@@ -5,29 +5,29 @@ header  {
     width: 86.75vw;
     text-align: left;
     border-left: 1vw solid $secondColor;
-    border-right: 1vw solid $secondColor;
+    border-right: 1vw solid $thirdColor;
     border-bottom: 1vw solid white;
-    height: 25vh;
+    height: 28vh;
     display: grid;
     grid-template-columns: 6/1fr;
-    grid-template-rows: 3/1fr;
+    justify-content: space-between;
 }
 
 header img  {
     max-width: 10vw;
-    grid-column: 1/1;
-    grid-row: 1/4;
+    grid-column: 1/2;
 }
 
 .titles    {
     padding: 1vw;
-    grid-column: 6/6;
+    grid-column: 4/6;
     line-height: 0.5;
+    text-align: right;
 }
 
-header h1   {
+h1   {
     font-size: $xl-size;
-    font-weight: bold;
+    font-family: 'Lobster';
 }
 
 header h3   {
