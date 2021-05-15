@@ -2,8 +2,6 @@
     grid-column: 4/6;
 }
 
-
-
 input   {
     border: 5px solid white;
     border-right: 1vw solid $secondColor;
@@ -21,6 +19,8 @@ input   {
     font-size: 4em;
     align-self: flex-end;
     justify-self: flex-end;
+    padding-top: 1vw;
+    padding-right: 1vw;
 }
 
 input::placeholder {

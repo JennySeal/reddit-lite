@@ -1,6 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit';
 
-
 export const storiesSlice = createSlice({
     name: 'stories',
     initialState: {},
@@ -27,17 +26,9 @@ export const storiesSlice = createSlice({
                 isError: true,        
         } 
         },
-        removeStory: (state, action) => {
-            return {
-                ...state,
-                isLoading: false, 
-                isError: false, 
-                children: state.data.data.children.filter(story => story.data.id !== action.payload)
-        }
-    }
 }})
 
 
 export const selectStories = state => state.stories;
-export const {fetchingStories, gotStories, fetchStoriesFailed, removeStory} = storiesSlice.actions;
+export const {fetchingStories, gotStories, fetchStoriesFailed} = storiesSlice.actions;
 export default storiesSlice.reducer;

@@ -5,7 +5,7 @@ import {useSelector} from 'react-redux';
 import StoryList from './StoryList';
 import FullStory from './FullStory';
 
-const Story = ({onSearchSubmit}) => {
+const Story = ({handleSidebarClick}) => {
     const stories = useSelector(selectStories)
     const loading = stories.isLoading;
 
@@ -16,7 +16,7 @@ const Story = ({onSearchSubmit}) => {
             <LoadingIcon/> : <p>Here are some Reddit Stories for you</p>}
         {(stories.data !== undefined) ?
             (stories.data.data !== undefined) ?
-        <StoryList onSearchSubmit={onSearchSubmit}/>
+        <StoryList handleSidebarClick={handleSidebarClick}/>
          : <FullStory/> : <p></p>}
         </div>      
         )
