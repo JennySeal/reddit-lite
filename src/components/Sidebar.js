@@ -1,16 +1,16 @@
 import React from 'react'
 
-const Sidebar = ({handleSidebarClick}) => {
+const Sidebar = ({onArtistClick}) => {
     return (
         <aside>
         <p>Artists</p>
-        <form onSubmit={handleSidebarClick}>
-            <button id="Gabriel Dawe" value="search.json?limit=25&q=Gabriel Dawe" onClick={handleSidebarClick}> Gabriel Dawe</button>
-            <button id="Yayoi Kusama" value="search.json?limit=25&q=Yayoi Kusama" onClick={handleSidebarClick}>Yayoi Kusama</button>
-            <button id="Peter Doig" value="search.json?limit=25&q=Peter Doig" onClick={handleSidebarClick}>Peter Doig</button>
-            <button id="Olafur Eliasson" value="search.json?limit=25&q=Olafur Eliasson" onClick={handleSidebarClick}>Olafur Eliasson</button>
-            <button id="Banksy" value="search.json?limit=25&q=Banksy" onClick={handleSidebarClick}>Banksy</button>
-            <button id="Jeff Koons" value="search.json?limit=25&q=Jeff Koons" onClick={handleSidebarClick}>Jeff Koons</button>
+        <form onSubmit={onArtistClick}>
+            <button id="Gabriel Dawe" value="Gabriel Dawe" onClick={onArtistClick}> Gabriel Dawe</button>
+            <button id="Yayoi Kusama" value="Yayoi Kusama" onClick={onArtistClick}>Yayoi Kusama</button>
+            <button id="Peter Doig" value="Peter Doig" onClick={onArtistClick}>Peter Doig</button>
+            <button id="Olafur Eliasson" value="Olafur Eliasson" onClick={onArtistClick}>Olafur Eliasson</button>
+            <button id="Banksy" value="Banksy" onClick={onArtistClick}>Banksy</button>
+            <button id="Jeff Koons" value="Jeff Koons" onClick={onArtistClick}>Jeff Koons</button>
             </form>
             </aside>
     )

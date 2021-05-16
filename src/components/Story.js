@@ -5,18 +5,19 @@ import {useSelector} from 'react-redux';
 import StoryList from './StoryList';
 import FullStory from './FullStory';
 
-const Story = ({handleSidebarClick}) => {
+const Story = ({onOpenPost}) => {
     const stories = useSelector(selectStories)
     const loading = stories.isLoading;
+    console.log(stories.data);
 
     
     return (
         <div className="storyContainer">
-        {(loading === undefined) ? 
+        {(loading === true) ? 
             <LoadingIcon/> : <p>Here are some Reddit Stories for you</p>}
         {(stories.data !== undefined) ?
             (stories.data.data !== undefined) ?
-        <StoryList handleSidebarClick={handleSidebarClick}/>
+        <StoryList onOpenPost={onOpenPost}/>
          : <FullStory/> : <p></p>}
         </div>      
         )

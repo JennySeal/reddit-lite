@@ -1,4 +1,5 @@
-import React, {useCallback, useEffect} from 'react'
+import React, {useCallback, useEffect} from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
 import axios from 'axios';
 
@@ -7,6 +8,7 @@ import Story from './components/Story';
 import Sidebar from './components/Sidebar';
 import SubSidebar from './components/SubSidebar';
 import Footer from './components/Footer';
+import FullStory from './components/FullStory';
 
 import './styles/styles.scss'
 
@@ -15,6 +17,7 @@ import {updateSearch} from './features/searches/searchSlice';
 import {selectSearches} from './features/searches/searchSlice';
 
 const API_Endpoint = 'https://www.reddit.com/'
+
 
 const App = () => {
   
@@ -30,6 +33,7 @@ const handleFetchStories = useCallback(() => {
   })
 .catch(() => 
 dispatch(fetchStoriesFailed));
+return console.error()
 }, [url, dispatch]);
 
 useEffect(() => {
@@ -37,22 +41,44 @@ useEffect(() => {
     handleFetchStories();
     }, [handleFetchStories, searchTerm])
  
-const handleSidebarClick = useCallback((event) => {
+const onArtistClick = useCallback((event) => {
+  const artistSearchParams = "search.json?limit=30&q=";
   event.preventDefault();
   localStorage.setItem('history', searchTerm)
-  dispatch(updateSearch(event.currentTarget.value))
+  dispatch(updateSearch(`${artistSearchParams}${event.currentTarget.value}`))
+},[dispatch, searchTerm]);
+
+const onSubRedditClick = useCallback((event) => {
+  const subRedditParams = "top/.json?count=25";
+  console.log(`${event.currentTarget.value}${subRedditParams}`)
+  event.preventDefault();
+  localStorage.setItem('history', searchTerm);
+  dispatch(updateSearch(`${event.currentTarget.value}${subRedditParams}`))
+},[dispatch, searchTerm]);
+
+const onOpenPost = useCallback((event) => {
+ const openPostParams = `/${event.currentTarget.value}.json`;
+  console.log(openPostParams);
+  event.preventDefault();
+  localStorage.setItem('history', searchTerm);
+  dispatch(updateSearch(openPostParams))
 },[dispatch, searchTerm]);
 
   return (
+    <Router>
     <div className='outerContainer'>
     <Header/>
     <div className='innerContainer'>
-    <Sidebar handleSidebarClick={handleSidebarClick}/>
-    <Story handleSidebarClick={handleSidebarClick}/>
-    <SubSidebar handleSidebarClick={handleSidebarClick}/>
+    <Sidebar onArtistClick={onArtistClick}/>
+    <Switch>
+    <Route path="/" exact component={Story} onOpenPost={onOpenPost}/>
+    <Route path="/:id" component={FullStory}/>
+    </Switch>
+    <SubSidebar onSubRedditClick={onSubRedditClick}/>
     </div>
     <Footer/>
     </div>
+    </Router>
   )
 }
 export default App;

@@ -2,7 +2,9 @@ import {createSlice} from '@reduxjs/toolkit';
 
 export const storiesSlice = createSlice({
     name: 'stories',
-    initialState: {},
+    initialState: {isLoading: true,
+                   isError: false
+                },
     reducers: {
         fetchingStories:(state) => {
             return {
