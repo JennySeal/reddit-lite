@@ -14,7 +14,7 @@ console.log(fullstory);
             <div key={uuidv4()}>
             {dataItem.data.children[0].data.title && <h3>{dataItem.data.children[0].data.title}</h3>}
             {dataItem.data.children[0].data.url_overridden_by_dest && <img src={dataItem.data.children[0].data.url_overridden_by_dest} alt=""/>}
-            {dataItem.data.children[0].data.url_overridden_by_dest && <img src={dataItem.data.children[0].data.thumbnail} alt=""/>}
+            {!dataItem.data.children[0].data.url_overridden_by_dest && <img src={dataItem.data.children[0].data.thumbnail} alt=""/>}
             {dataItem.data.children[0].data.num_comments &&<p>Number of comments: {dataItem.data.children[0].data.num_comments}</p>}
             {dataItem.data.children.map((comment)=>
                 comment.data.body && <ul><li className="comment">"{comment.data.body}"
