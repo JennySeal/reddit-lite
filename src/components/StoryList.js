@@ -1,7 +1,6 @@
 import React from 'react'
 import {selectStories} from './../features/stories/storiesSlice';
 import {useSelector} from 'react-redux';
-import RedditLogo from './RedditLogo.png';
 import StoryPage from './StoryPage'
 
 const StoryList = ({onOpenPost}) => {
@@ -21,9 +20,7 @@ console.log(stories);
             {story.data.link_flair_text && <p><span className="tag">{story.data.link_flair_text}</span></p>}
             <StoryPage id={story.data.id} onOpenPost={onOpenPost}/>    
             </div>
-            <p><img src={story.data.url} alt="Nothing to see here" onError={(e)=>{
-               e.target.src=RedditLogo;
-           } } /></p>
+            <p><img src={story.data.url} alt="" onError={(e)=>{e.target.onerror = null; e.target.src=story.data.thumbnail}}/></p>
         </div>)}
         </div>
         )

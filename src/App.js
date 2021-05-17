@@ -1,5 +1,4 @@
 import React, {useCallback, useEffect} from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
 import axios from 'axios';
 
@@ -8,7 +7,7 @@ import Story from './components/Story';
 import Sidebar from './components/Sidebar';
 import SubSidebar from './components/SubSidebar';
 import Footer from './components/Footer';
-import FullStory from './components/FullStory';
+
 
 import './styles/styles.scss'
 
@@ -65,20 +64,15 @@ const onOpenPost = useCallback((event) => {
 },[dispatch, searchTerm]);
 
   return (
-    <Router>
     <div className='outerContainer'>
     <Header/>
     <div className='innerContainer'>
     <Sidebar onArtistClick={onArtistClick}/>
-    <Switch>
-    <Route path="/" exact component={Story} onOpenPost={onOpenPost}/>
-    <Route path="/:id" component={FullStory}/>
-    </Switch>
+    <Story onOpenPost={onOpenPost}/>
     <SubSidebar onSubRedditClick={onSubRedditClick}/>
     </div>
     <Footer/>
     </div>
-    </Router>
   )
 }
 export default App;

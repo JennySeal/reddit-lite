@@ -33,6 +33,7 @@
     align-content: flex-start;
     justify-content: flex-start;
     padding: 0.5vw;
+    max-width: 27vw;
 }
 
 .story p {
@@ -44,6 +45,7 @@
 
 .story h3{
     font-size: $medium-size;
+    word-wrap: break-word;
 }
 
 .story li {
@@ -52,6 +54,7 @@
 }
 
 .story img  {max-width: 27vw;
+    min-width: 15vw;
     padding-right: 1vw;}
 
 .yellow-button  {
