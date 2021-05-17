@@ -1,6 +1,20 @@
-import React from 'react'
+import React, {useCallback} from 'react'
+import {useDispatch, useSelector} from 'react-redux';
+import {selectSearches, updateSearch} from './../features/searches/searchSlice';
 
-const Sidebar = ({onArtistClick}) => {
+const Sidebar = () => {
+
+    const searchTerm = useSelector(selectSearches);
+    const dispatch = useDispatch();
+
+    const onArtistClick = useCallback((event) => {
+        const artistSearchParams = "search.json?limit=30&q=";
+        event.preventDefault();
+        localStorage.setItem('history', searchTerm)
+        dispatch(updateSearch(`${artistSearchParams}${event.currentTarget.value}`))
+      },[dispatch, searchTerm]);
+      
+      
     return (
         <aside>
         <p>Artists</p>

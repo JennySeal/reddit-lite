@@ -40,13 +40,6 @@ useEffect(() => {
     handleFetchStories();
     }, [handleFetchStories, searchTerm])
  
-const onArtistClick = useCallback((event) => {
-  const artistSearchParams = "search.json?limit=30&q=";
-  event.preventDefault();
-  localStorage.setItem('history', searchTerm)
-  dispatch(updateSearch(`${artistSearchParams}${event.currentTarget.value}`))
-},[dispatch, searchTerm]);
-
 const onSubRedditClick = useCallback((event) => {
   const subRedditParams = "top/.json?count=25";
   console.log(`${event.currentTarget.value}${subRedditParams}`)
@@ -67,7 +60,7 @@ const onOpenPost = useCallback((event) => {
     <div className='outerContainer'>
     <Header/>
     <div className='innerContainer'>
-    <Sidebar onArtistClick={onArtistClick}/>
+    <Sidebar />
     <Story onOpenPost={onOpenPost}/>
     <SubSidebar onSubRedditClick={onSubRedditClick}/>
     </div>
