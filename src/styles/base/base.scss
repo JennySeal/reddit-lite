@@ -45,3 +45,6 @@ cursor: pointer;
         align-items: center;
     } 
 }
+@media (max-width: $breakpointTwo) {
+   *    {font-family: Roboto}
+} 
