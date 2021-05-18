@@ -12,7 +12,7 @@ console.log(stories);
         <div className="stories">
             {stories.data.data.children.map((story) => 
             <div key={story.data.id} className="story">
-            <p><img src={story.data.url} alt="" onError={(e)=>{e.target.onerror = null; e.target.src=story.data.thumbnail}}/></p>
+            <p><img src={story.data.url} alt="" onError={(e)=>{e.target.onerror = null; e.target.src=story.data.thumbnail }}/></p>
             <div className="storyText">
             <h3>{story.data.title}</h3>
             <p>SubReddit: {story.data.subreddit}</p>

@@ -31,10 +31,13 @@
     .asideSub {
         flex-direction: row;
         max-width: 96vw;
+        justify-content: space-between;
     } 
     .buttonSub {
         font-size: $small-size;
-
-    
-}
+        width: 13.7vw;
+       }
+    .asideSub p {
+        display: none;
+    }
 }

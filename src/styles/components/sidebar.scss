@@ -31,14 +31,14 @@ button  {
     aside {
         flex-direction: row;
         max-width: 96vw;
-        justify-items: center;
+        justify-content: space-between;
     } 
     button {
         font-size: $small-size;
-        width: 14vw;
+        width: 14.5vw;
+        
     }
     aside p {
-        text-align: left;
-        margin-left: 1vw;
+        display: none;
     }
 }
