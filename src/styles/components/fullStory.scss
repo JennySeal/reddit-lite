@@ -29,7 +29,23 @@
     word-wrap: break-word;
 }
 
+.fullStory li {
+    list-style-type: none;
+}
+
 .author {
     color: $mainColor;
     font-weight: normal;
+}
+
+@media (max-width: $breakpointOne) 
+{ .fullStory {
+    width: 90vw;
+    margin: 2vw;
+}
+
+.fullStory .comment  {
+    max-width: 70vw;
+
+}
 }

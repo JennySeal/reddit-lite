@@ -15,7 +15,7 @@ a   {text-decoration: none;
 
 .outerContainer {
     width: 100%;
-    display: flex;
+      display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: white;
@@ -25,7 +25,8 @@ a   {text-decoration: none;
 .innerContainer {
     margin-bottom: 5vw;
     min-height: 80vh;
-    display: flex;
+    width: 99%;
+    display: inline-flex;
     border-left: 1rem solid $secondColor;
     border-right: 1rem solid $thirdColor;
     background-color: whitesmoke;}
@@ -39,5 +40,7 @@ cursor: pointer;
 {
     .innerContainer {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     } 
 }

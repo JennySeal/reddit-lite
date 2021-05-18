@@ -8,15 +8,20 @@ aside {
     max-width: 19vw;
     display: flexbox;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     margin-right: 1vw;
+}
+
+.sidebars {
+    justify-content: space-around;
 }
 
 button  {
     width: 17vw;
     margin-left: 1vw;
+    padding: 1vw 0;
     margin-top: 1vw;
-    padding: 0.8vw;
     background-color: $secondColor;
     color: white;
     font-weight: bold;
@@ -24,21 +29,24 @@ button  {
     border-left: 1vw solid $mainColor;
     border-radius: 5px;
     font-size: $medium-size;
+    word-wrap: break-word;
 }
 
 @media (max-width: $breakpointOne) 
 {
     aside {
         flex-direction: row;
-        max-width: 96vw;
+        width: 96vw;
         justify-content: space-between;
+        flex-wrap: nowrap;
     } 
     button {
         font-size: $small-size;
-        width: 14.5vw;
-        
-    }
+        height: 25%;
+        width: 32%;
+       }
     aside p {
         display: none;
     }
 }
+

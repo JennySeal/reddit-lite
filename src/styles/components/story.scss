@@ -5,7 +5,7 @@
     flex-direction: column;
     font-weight: bold;
     justify-items: space-between;
-    text-align: right;
+    text-align: left;
 }
 
 .stories {
@@ -56,11 +56,13 @@
     background-color: $thirdColor;
     color: $mainColor;
     border: none;
-    padding: 0.5vw;
+    padding: 1vw;
     margin-bottom: 1vw;
     border-left: 1vw solid $mainColor;
     margin-left: 0;
-    width: 20vw;
+    width: 17vw;
+    height: 4vw;
+
 }
 
 .tag    {border-right: 0.5rem solid $secondColor;
@@ -94,4 +96,37 @@
             .story p {
                 text-align: center;
             }
+            .yellow-button  {
+                width: 30vw;
+            }           
 }
+
+@media (max-width: $breakpointTwo) 
+{   .stories    {
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.story {
+    font-size: $small-size;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+
+}
+.storyText {
+    width: 90vw;
+    align-items: center;
+}
+.story img {
+    min-width: 60vw;
+} 
+
+.story p {
+    text-align: center;
+}
+.yellow-button  {
+    width: 30vw;
+}           
+}
+

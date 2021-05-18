@@ -8,13 +8,13 @@
     display: flexbox;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-right: 1vw;
 }
 
 .buttonSub  {
     width: 17vw;
     margin-right: 1vw;
-    padding: 0.8vw;
     margin-top: 1vw;
     background-color: $thirdColor;
     color: $mainColor;
@@ -32,12 +32,12 @@
         flex-direction: row;
         max-width: 96vw;
         justify-content: space-between;
+        flex-wrap: nowrap;
     } 
     .buttonSub {
         font-size: $small-size;
-        width: 13.7vw;
+        height: 25%;
+        width: 31%;
        }
-    .asideSub p {
-        display: none;
     }
-}
+
