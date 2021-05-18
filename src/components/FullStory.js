@@ -20,7 +20,7 @@ console.log(fullstory);
             {fullstory.data[1].data.children.map((comment)=>
                 comment.data.body && <ul><li className="comment">"{comment.data.body}"
                 &nbsp; <span className="author">from &nbsp;  {comment.data.author}</span></li></ul>)}
-            </div>)
+                </div>
         </div>
     )
 }

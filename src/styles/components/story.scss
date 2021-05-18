@@ -4,12 +4,12 @@
     font-size: $medium-size;
     display: flex;
     flex-direction: column;
+    font-weight: bold;
 }
 
 .stories {
     font-size: $large-size;
     color: $mainColor;
-    font-weight: 500;
     display: flex;
     flex-wrap:wrap;
     flex-direction: row;
@@ -40,7 +40,6 @@
     color: $secondColor;
     font-size: $medium-size;
     line-height: normal;
-    font-weight: bold; 
     text-align: left;}
 
 .story h3{
@@ -65,7 +64,7 @@
     padding: 1vw;
     margin-bottom: 1vw;
     border-left: 1vw solid $mainColor;
-    font-size: $small-size;
+    font-size: $medium-size;
     margin-left: 0;
 }
 
