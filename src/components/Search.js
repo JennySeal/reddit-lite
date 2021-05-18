@@ -15,8 +15,8 @@ const Search = () => {
     return (
         <div>
         <form className="search" onSubmit={handleSearchSubmit}>
-        <p><VscSearch className="searchIcon"/>
-        <input type="text" autoComplete="off" autoFocus={true} id="search" onInput={((e)=>setSearch(`search.json?limit=25&q=${e.currentTarget.value}`))}/></p>
+        <VscSearch className="searchIcon"/>
+        <input type="text" autoComplete="off" autoFocus={true} id="search" onInput={((e)=>setSearch(`search.json?limit=25&q=${e.currentTarget.value}`))}/>
         </form>
         </div>
             )

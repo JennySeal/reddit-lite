@@ -1,26 +1,27 @@
 header  {
     background-color: $mainColor;
     color: white;
-    padding: 1vw;
-    width: 88.75vw;
+    padding: 0.85vw;
     text-align: left;
     border-left: 1vw solid $secondColor;
     border-right: 1vw solid $thirdColor;
     border-bottom: 1vw solid white;
-    height: 28vh;
-    display: grid;
-    grid-template-columns: 6/1fr;
+    max-height: 28vh;
+    display: inline-flex;
     justify-content: space-between;
 }
 
 header img  {
-    max-width: 70%;
-    grid-column: 1/2;
+    max-height: 90%;
+
 }
 
+.logoSearch {
+    display: inline-flex;
+    align-items: center;
+}
 .titles    {
     padding: 1vw;
-    grid-column: 4/6;
     line-height: 0.5;
     text-align: right;
 }
@@ -30,6 +31,23 @@ h1   {
     font-family: 'Lobster';
 }
 
-header h3   {
-    font-size: $medium-size;
+header h2   {
+    font-size: $large-size;
+}
+
+
+@media (max-width: $breakpointOne) 
+{            
+            header {
+                max-height: 10vh;
+            }   
+            header img {
+                max-height: 10vh;
+            }
+            header h1 {
+                font-size: $large-size;
+            }
+            .story img {
+                max-height: 90vh;
+            } 
 }

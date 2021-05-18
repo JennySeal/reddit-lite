@@ -54,9 +54,11 @@ const onOpenPost = useCallback((event) => {
     <div className='outerContainer'>
     <Header/>
     <div className='innerContainer'>
-    <Sidebar />
-    <Story onOpenPost={onOpenPost}/>
+    <div className='sidebars'>
     <SubSidebar/>
+    <Sidebar />
+    </div>
+    <Story onOpenPost={onOpenPost}/>
     </div>
     <Footer/>
     </div>

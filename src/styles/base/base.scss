@@ -1,4 +1,5 @@
-* {font-family: 'Roboto Slab', sans-serif;}
+* {font-family: 'Roboto Slab', sans-serif;
+    word-wrap: break-word;}
 
 
 html {
@@ -13,8 +14,7 @@ a   {text-decoration: none;
     font-weight: bold;}
 
 .outerContainer {
-    width: 90vw;
-    margin-left: 3vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,14 +23,21 @@ a   {text-decoration: none;
 
 
 .innerContainer {
-    width: 92vw;
     margin-bottom: 5vw;
     min-height: 80vh;
     display: flex;
     border-left: 1rem solid $secondColor;
+    border-right: 1rem solid $thirdColor;
     background-color: whitesmoke;}
 
 
 button {
 cursor: pointer;
+}
+
+@media (max-width: $breakpointOne) 
+{
+    .innerContainer {
+        flex-direction: column;
+    } 
 }

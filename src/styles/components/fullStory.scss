@@ -1,10 +1,11 @@
 .fullStory  {   
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-items: center;
     margin-bottom: 3vh;
     padding-left: 1vw;
-    width: 54vw;
+    width: 70vw;
     line-height: $large-size;
     box-shadow: 0 0 15px $mainColor;
     padding: 0.5vw;
@@ -14,7 +15,8 @@
     padding-left: 1vw;
 }
 
-.fullStory img  {max-width: 95%;
+.fullStory img  {max-width: 65vw;
+        max-height: 95vh;
         padding: 1vw;}
 
 .fullStory .comment  {

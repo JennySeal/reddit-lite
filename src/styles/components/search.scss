@@ -1,26 +1,21 @@
-.search  {
-    grid-column: 4/6;
-}
-
 input   {
     border: 5px solid white;
-    border-right: 1vw solid $secondColor;
+    border-left: 1vw solid $secondColor;
     min-height: 2vw;
     font-size: $medium-size;
     color: white;
     font-weight: bold;
     width: 20vw;
     background-color: $mainColor;
-    text-align: right;  
-    margin-bottom: 3vw;
+    text-align: left;  
+    margin: 1vw;
 }
 
 .searchIcon {
     font-size: 4em;
-    align-self: flex-end;
-    justify-self: flex-end;
-    padding-top: 1vw;
-    padding-right: 1vw;
+    align-self: center;
+    justify-self: center;
+    padding-left: 1vw;
 }
 
 input::placeholder {

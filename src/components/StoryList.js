@@ -12,6 +12,7 @@ console.log(stories);
         <div className="stories">
             {stories.data.data.children.map((story) => 
             <div key={story.data.id} className="story">
+            <p><img src={story.data.url} alt="" onError={(e)=>{e.target.onerror = null; e.target.src=story.data.thumbnail}}/></p>
             <div className="storyText">
             <h3>{story.data.title}</h3>
             <p>SubReddit: {story.data.subreddit}</p>
@@ -20,7 +21,7 @@ console.log(stories);
             {story.data.link_flair_text && <p><span className="tag">{story.data.link_flair_text}</span></p>}
             <StoryPage id={story.data.id} onOpenPost={onOpenPost}/>    
             </div>
-            <p><img src={story.data.url} alt="" onError={(e)=>{e.target.onerror = null; e.target.src=story.data.thumbnail}}/></p>
+            
         </div>)}
         </div>
         )

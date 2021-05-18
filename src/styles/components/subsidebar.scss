@@ -8,13 +8,13 @@
     display: flexbox;
     flex-direction: column;
     justify-content: center;
-    margin-left: 1vw;
+    margin-right: 1vw;
 }
 
 .buttonSub  {
-    min-width: 15vw;
+    width: 17vw;
+    margin-right: 1vw;
     padding: 0.8vw;
-    margin-left: 2vw;
     margin-top: 1vw;
     background-color: $thirdColor;
     color: $mainColor;
@@ -23,5 +23,18 @@
     border-right: 1vw solid $mainColor;
     border-radius: 5px;
     font-size: $medium-size;
+    word-wrap: break-word;
+}
+
+@media (max-width: $breakpointOne) 
+{
+    .asideSub {
+        flex-direction: row;
+        max-width: 96vw;
+    } 
+    .buttonSub {
+        font-size: $small-size;
+
     
+}
 }
