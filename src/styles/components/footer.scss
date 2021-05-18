@@ -2,3 +2,11 @@ footer   {
     border-top: 1px solid $mainColor;
     font-size: $small-size;
 }
+
+@media (max-width: $breakpointOne) 
+{
+    footer 
+    {
+        font-size: $xsmall-size;
+    }
+}

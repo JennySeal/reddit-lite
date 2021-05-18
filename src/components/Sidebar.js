@@ -21,10 +21,7 @@ const Sidebar = () => {
         <form onSubmit={onArtistClick}>
             <button className="buttonSub" id="Gabriel Dawe" value="Gabriel Dawe" onClick={onArtistClick}> Gabriel Dawe</button>
             <button className="buttonSub" id="Yayoi Kusama" value="Yayoi Kusama" onClick={onArtistClick}>Yayoi Kusama</button>
-            <button className="buttonSub" id="Peter Doig" value="Peter Doig" onClick={onArtistClick}>Peter Doig</button>
-            <button className="buttonSub" id="Olafur Eliasson" value="Olafur Eliasson" onClick={onArtistClick}>Olafur Eliasson</button>
-            <button className="buttonSub" id="Banksy" value="Banksy" onClick={onArtistClick}>Banksy</button>
-            <button className="buttonSub" id="Jeff Koons" value="Jeff Koons" onClick={onArtistClick}>Jeff Koons</button>
+            <button className="buttonSub" id="Frans Lanting" value="Frans Lanting" onClick={onArtistClick}>Frans Lanting</button>
             </form>
             </aside>
     )

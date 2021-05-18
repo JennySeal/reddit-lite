@@ -56,3 +56,10 @@ header h2   {
                 max-height: 90vh;
             } 
 }
+@media (max-width: $breakpointTwo) {
+    .titles {line-height: 1em;}
+    header {
+        max-height: 20vh;
+    }
+
+{ 

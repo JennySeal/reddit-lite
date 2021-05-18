@@ -31,3 +31,14 @@ input::placeholder {
     padding: 0;
     margin-bottom: 0.2rem;
 }
+
+@media (max-width: $breakpointOne) 
+{
+    input {
+        border: 5px solid white;
+    } 
+    
+    .searchIcon {
+        font-size: 2em;
+    }
+}
