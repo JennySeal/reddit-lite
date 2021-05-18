@@ -1,6 +1,23 @@
-import React from 'react'
+import React, {useCallback} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
 
-const SubSidebar = ({onSubRedditClick}) => {
+import {updateSearch} from './../features/searches/searchSlice';
+import {selectSearches} from './../features/searches/searchSlice';
+
+
+const SubSidebar = () => {
+
+    const searchTerm = useSelector(selectSearches);
+    const dispatch = useDispatch();
+
+    const onSubRedditClick = useCallback((event) => {
+        const subRedditParams = "top/.json?count=25";
+        console.log(`${event.currentTarget.value}${subRedditParams}`)
+        event.preventDefault();
+        localStorage.setItem('history', searchTerm);
+        dispatch(updateSearch(`${event.currentTarget.value}${subRedditParams}`))
+      },[dispatch, searchTerm]);
+
     return (
         <aside className="asideSub" >
         <p>SubReddits</p>

@@ -40,13 +40,7 @@ useEffect(() => {
     handleFetchStories();
     }, [handleFetchStories, searchTerm])
  
-const onSubRedditClick = useCallback((event) => {
-  const subRedditParams = "top/.json?count=25";
-  console.log(`${event.currentTarget.value}${subRedditParams}`)
-  event.preventDefault();
-  localStorage.setItem('history', searchTerm);
-  dispatch(updateSearch(`${event.currentTarget.value}${subRedditParams}`))
-},[dispatch, searchTerm]);
+
 
 const onOpenPost = useCallback((event) => {
  const openPostParams = `/${event.currentTarget.value}.json`;
@@ -62,7 +56,7 @@ const onOpenPost = useCallback((event) => {
     <div className='innerContainer'>
     <Sidebar />
     <Story onOpenPost={onOpenPost}/>
-    <SubSidebar onSubRedditClick={onSubRedditClick}/>
+    <SubSidebar/>
     </div>
     <Footer/>
     </div>
