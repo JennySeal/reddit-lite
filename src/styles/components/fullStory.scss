@@ -15,14 +15,13 @@
     padding-left: 1vw;
 }
 
-.fullStory img  {max-width: 65vw;
+.fullStory img  {max-width: 85vw;
         max-height: 95vh;
         padding: 1vw;}
 
 .fullStory .comment  {
     font-weight: bold;
     margin: 1vw;
-    max-width: 40vw;
     font-style: italic;
     border-bottom: 1px solid $mainColor;
     padding: 1vw;
@@ -45,7 +44,6 @@
 }
 
 .fullStory .comment  {
-    max-width: 70vw;
+    font-size: $small-size;} 
 
-}
 }
