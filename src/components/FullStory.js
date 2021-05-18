@@ -18,8 +18,8 @@ console.log(fullstory);
                 <img src={post.thumbnail} alt=""/>} 
                 {post.num_comments && <p>Number of comments: {post.num_comments}</p>}
             {fullstory.data[1].data.children.map((comment)=>
-                comment.data.body && <ul><li className="comment">"{comment.data.body}"
-                &nbsp; <span className="author">from &nbsp;  {comment.data.author}</span></li></ul>)}
+                comment.data.body && <p className="comment">"{comment.data.body}"
+                &nbsp; <span className="author">from &nbsp;  {comment.data.author}</span></p>)}
                 </div>
         </div>
     )
