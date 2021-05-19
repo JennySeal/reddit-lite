@@ -38,10 +38,12 @@
 .story p {
     color: $secondColor;
     line-height: normal;
+    font-size: $small-size;
     }
 
 .story h3{
     word-wrap: break-word;
+    font-size: $medium-size;
 }
 
 .story li {

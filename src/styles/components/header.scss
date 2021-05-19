@@ -54,6 +54,9 @@ header h2   {
             }
             .story img {
                 max-height: 90vh;
+            }
+            .story titles {
+                line-height: normal;
             } 
 }
 @media (max-width: $breakpointTwo) {

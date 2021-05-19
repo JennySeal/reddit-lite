@@ -34,11 +34,26 @@
 
 @media (max-width: $breakpointOne) 
 { .fullStory {
-    width: 90vw;
+    width: 92vw;
     margin: $standard-margin;
 }
 
 .fullStory .comment  {
     font-size: $medium-size;} 
+
+.fullStory img  {max-width: 90vw;
+        max-height: 110vh;
+        padding: $standard-padding;}
+
+}
+
+@media (max-width: $breakpointThree) 
+{ .fullStory {
+    width: 92vw;
+    margin: $standard-margin;
+}
+
+.fullStory .comment  {
+    font-size: $small-size;} 
 
 }
