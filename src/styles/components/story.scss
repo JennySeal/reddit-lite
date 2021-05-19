@@ -37,7 +37,7 @@
 
 .story p {
     color: $secondColor;
-    line-height: normal;
+    line-height: 1vw;       
     font-size: $small-size;
     }
 
@@ -84,6 +84,7 @@
             .storyContainer {
                 width: 96vw;
                 text-align: left;
+                padding-left: $standard-padding;
             }  
             
             .story {
