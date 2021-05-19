@@ -16,6 +16,7 @@
     flex-direction: row;
     }
 
+
 .story  {   
     display: flex;
     flex-direction: column;
@@ -98,6 +99,8 @@
             .small-view {
                 display: flexbox;
                 flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 width: 45vw;
             }
             
@@ -113,9 +116,13 @@
                 text-align: center;
             }
             .yellow-button  {
-                width: 35vw;
+                width: 40vw;
+                margin-left: 2.5vw;
                 height: 6vw;
             }           
+
+            .tag
+            {margin-left: 2.5vw;}
 }
 
 @media (max-width: $breakpointTwo) 
