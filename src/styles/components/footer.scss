@@ -1,12 +1,14 @@
 footer   {
-    border-top: 1px solid $mainColor;
-    font-size: $small-size;
+    border-top: $standard-border solid $mainColor;
+    color: $mainColor;
+    font-weight: bold;
+    font-size: $medium-size;
 }
 
 @media (max-width: $breakpointOne) 
 {
     footer 
     {
-        font-size: $xsmall-size;
+        font-size: $small-size;
     }
 }

@@ -1,18 +1,18 @@
 header  {
     background-color: $mainColor;
     color: white;
-    padding: 0.85vw;
+    padding: $small-padding;
     text-align: left;
-    border-left: 1vw solid $secondColor;
-    border-right: 1vw solid $thirdColor;
-    border-bottom: 1vw solid white;
-    max-height: 17vh;
+    border-left: $standard-border solid $secondColor;
+    border-right: $standard-border solid $thirdColor;
+    border-bottom: $standard-border solid white;
+    max-height: 20vh;
     display: inline-flex;
     justify-content: space-between;
 }
 
 header img  {
-    max-height: 90%;
+    max-height: 18vh;
 
 }
 
@@ -22,10 +22,10 @@ header img  {
     max-width: 45%;
 }
 .titles    {
-    padding: 1vw;
+    padding: $standard-padding;
     padding-top: 0;
-    line-height: 0.2;
     text-align: right;
+    line-height: $small-padding;
 }
 
 h1   {
@@ -57,7 +57,7 @@ header h2   {
             } 
 }
 @media (max-width: $breakpointTwo) {
-    .titles {line-height: 1em;}
+ 
     header {
         max-height: 20vh;
     }

@@ -16,10 +16,10 @@ console.log(fullstory);
             {post.url_overridden_by_dest ? 
                 <img src={post.url_overridden_by_dest} alt=""/> :
                 <img src={post.thumbnail} alt=""/>} 
-                {post.num_comments && <p>Number of comments: {post.num_comments}</p>}
+                {post.num_comments>0 && <p>Number of comments: {post.num_comments}</p>}
             {fullstory.data[1].data.children.map((comment)=>
                 comment.data.body && <p className="comment">"{comment.data.body}"
-                &nbsp; <span className="author">from &nbsp;  {comment.data.author}</span></p>)}
+                &nbsp; <span className="author">said &nbsp;  {comment.data.author}</span></p>)}
                 </div>
         </div>
     )

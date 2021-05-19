@@ -1,42 +1,41 @@
 .fullStory  {   
-    display: flex;
+    display: flexbox;
     flex-direction: column;
     align-items: center;
-    justify-items: center;
-    margin-bottom: 3vh;
-    padding-left: 1vw;
+    justify-content: center;
+    margin-bottom: $standard-margin;
+    padding-left: $standard-padding;
     width: 70vw;
     line-height: $large-size;
     box-shadow: 0 0 15px $mainColor;
-    padding: 0.5vw;
+    padding: $small-padding;
     }
 
 .fullStory h3, .fullStory p  {
-    padding-left: 1vw;
+    padding-left: $standard-padding;
 }
 
-.fullStory img  {max-width: 85vw;
+.fullStory img  {max-width: 65vw;
         max-height: 110vh;
-        padding: 1vw;}
+        padding: $standard-padding;}
 
 .fullStory .comment  {
     font-weight: bold;
-    margin: 1vw;
+    margin: $standard-margin;
     font-style: italic;
-    border-bottom: 1px solid $mainColor;
-    padding: 1vw;
+    border-bottom: $small-border solid $secondColor;
+    padding: $standard-padding;
     word-wrap: break-word;
 }
 
 .author {
-    color: $mainColor;
-    font-weight: normal;
+    color: $secondColor;
 }
 
 @media (max-width: $breakpointOne) 
 { .fullStory {
     width: 90vw;
-    margin: 2vw;
+    margin: $standard-margin;
 }
 
 .fullStory .comment  {

@@ -13,8 +13,7 @@ const Story = ({onOpenPost}) => {
     
     return (
         <div className="storyContainer">
-        {(loading === true) ? 
-            <LoadingIcon/> : <p>Here are some Reddit Stories for you</p>}
+        {loading && <LoadingIcon/>}
         {(stories.data !== undefined) ?
             (stories.data.data !== undefined) ?
         <StoryList onOpenPost={onOpenPost}/>

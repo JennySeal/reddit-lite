@@ -9,10 +9,12 @@ const stories = useSelector(selectStories);
 console.log(stories);
 
     return (
+        <>
+        <p>Here are some Reddit Stories for you</p>
         <div className="stories">
             {stories.data.data.children.map((story) => 
             <div key={story.data.id} className="story">
-            <p><img src={story.data.url} alt="" onError={(e)=>{e.target.onerror = null; e.target.src=story.data.thumbnail }}/></p>
+            <p><img src={story.data.thumbnail} alt="" onError={(e)=>{e.target.onerror = null; e.target.src=story.data.url }}/></p>
             <div className="storyText">
             <h3>{story.data.title}</h3>
             <p>SubReddit: {story.data.subreddit}</p>
@@ -21,9 +23,9 @@ console.log(stories);
             {story.data.link_flair_text && <p><span className="tag">{story.data.link_flair_text}</span></p>}
             <StoryPage id={story.data.id} onOpenPost={onOpenPost}/>    
             </div>
-            
         </div>)}
         </div>
+        </>
         )
 }
 

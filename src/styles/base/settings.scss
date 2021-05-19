@@ -1,12 +1,25 @@
-$mainColor: #c40000;
-$secondColor: #2477d6;
-$thirdColor: #f7d024;
+$mainColor: #173e43; 
+$secondColor: #3fb0ac;
+$thirdColor: #fae496;
 
 $xsmall-size: 0.9rem;
-$small-size:1.2rem;
+$small-size: 1rem;
 $medium-size: 2rem;
 $large-size: 3rem;
-$xl-size:6rem;
+$xl-size: 6rem;
+
+$small-padding: 0.5vw;
+$standard-padding: 1vw;
+$large-padding: 5vw;
+
+$small-margin: 0.5vw;
+$standard-margin: 1vw;
+$large-margin: 5vw;
+
+$standard-border: 1vw;
+$small-border: 0.25vw;
+
 
 $breakpointOne: 1000px;
 $breakpointTwo: 750px;
+$breakpointThree: 500px;

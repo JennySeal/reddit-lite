@@ -1,21 +1,22 @@
-* {font-family: 'Roboto Slab', sans-serif;
-    word-wrap: break-word;}
-
+*   {font-family: 'Roboto Slab', sans-serif;
+    word-wrap: break-word;
+}
 
 html {
-font-size: 62.5%;
-margin: 0;
-padding: 0;
-text-decoration: none;
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    line-height: $small-padding;
 }
 
 a   {text-decoration: none;
     color: $secondColor;
-    font-weight: bold;}
+    font-weight: bold;
+}
 
 .outerContainer {
     width: 98vw;
-      display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: white;
@@ -23,14 +24,15 @@ a   {text-decoration: none;
 
 
 .innerContainer {
-    margin-bottom: 5vw;
+    margin-bottom: $large-margin;
     min-height: 80vh;
-    width: 97vw;
-    margin-right: 1vw;
+    width: 96vw;
+    margin-right: $standard-margin;
     display: inline-flex;
-    border-left: 1rem solid $secondColor;
-    border-right: 1rem solid $thirdColor;
-    background-color: whitesmoke;}
+    border-left: $standard-border solid $secondColor;
+    border-right: $standard-border solid $thirdColor;
+    background-color: white;
+}
 
 
 button {

@@ -1,5 +1,4 @@
 aside p {font-size: $medium-size;
-        text-align: center;
         color: $secondColor;
         font-weight: bold;
 }
@@ -8,25 +7,20 @@ aside {
     max-width: 19vw;
     display: flexbox;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-right: 1vw;
-}
-
-.sidebars {
-    justify-content: space-around;
+    justify-content: left;
+    margin-right: $standard-margin;
 }
 
 button  {
     width: 17vw;
-    margin-left: 1vw;
-    padding: 1vw 0;
-    margin-top: 1vw;
+    margin-left: $standard-margin;
+    padding: $standard-padding 0;
+    margin-top: $standard-margin;
     background-color: $secondColor;
     color: white;
     font-weight: bold;
     border: none;
-    border-left: 1vw solid $mainColor;
+    border-left: $standard-border solid $mainColor;
     border-radius: 5px;
     font-size: $medium-size;
     word-wrap: break-word;

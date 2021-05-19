@@ -1,6 +1,6 @@
 input   {
-    border: 5px solid white;
-    border-left: 1vw solid $secondColor;
+    border: $standard-border solid white;
+    border-left: $standard-border solid $secondColor;
     min-height: 2vw;
     font-size: $medium-size;
     color: white;
@@ -8,29 +8,21 @@ input   {
     width: 20vw;
     background-color: $mainColor;
     text-align: left;  
-    margin: 1vw;
+    margin: $standard-margin;
 }
 
 .searchIcon {
-    font-size: 4em;
+    font-size: $large-size;
     align-self: center;
     justify-self: center;
-    padding-left: 1vw;
+    padding-left: $standard-padding;
 }
 
 input::placeholder {
     color: white; 
 }
 
-.right-aligned  {
-    float: right;
-    background-color: $mainColor;
-    color: white;
-    border: 5px solid white;
-    border-right: 1vw solid $secondColor;
-    padding: 0;
-    margin-bottom: 0.2rem;
-}
+
 
 @media (max-width: $breakpointOne) 
 {

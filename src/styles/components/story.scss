@@ -4,14 +4,14 @@
     display: flex;
     flex-direction: column;
     font-weight: bold;
-    justify-items: space-between;
-    text-align: left;
+    justify-items: space-around;
 }
 
 .stories {
     font-size: $medium-size;
     color: $mainColor;
     display: flex;
+    justify-content: space-around;
     flex-wrap:wrap;
     flex-direction: row;
     }
@@ -19,26 +19,25 @@
 .story  {   
     display: flex;
     flex-direction: column;
-    margin: 1vw;
-    padding-left: 1vw;
-    min-height: 9vh;
-    line-height: $large-size;
-    box-shadow: 0 0 15px $mainColor;
-    justify-items: space-between;
+    margin: $standard-margin;
+    padding: $small-padding;
+    line-height: normal;
+    box-shadow: 0 0 1vw $mainColor;
+    justify-content: space-evenly;
+    align-items: center;
     font-size: $medium-size;
     }
 
 .storyText {
     display: flex;
     flex-direction: column;
-    padding: 0.5vw;
-    width: 15vw;
+    width: 14vw;
+    text-align: center;
 }
 
 .story p {
     color: $secondColor;
     line-height: normal;
-    text-align: left;
     }
 
 .story h3{
@@ -49,26 +48,30 @@
     list-style-type: none;
 }
 
-.story img  {width: 20vw;
-    padding-right: 1vw;}
+.story img  {
+    width: 12vw;
+    margin-left: $standard-margin;
+    margin-right: $standard-margin;
+
+}
 
 .yellow-button  {
     background-color: $thirdColor;
     color: $mainColor;
     border: none;
-    padding: 1vw;
-    margin-bottom: 1vw;
-    border-left: 1vw solid $mainColor;
-    margin-left: 0;
-    width: 17vw;
+    padding: $small-padding;
+    margin-bottom: $standard-margin;
+    border-left: $standard-border solid $mainColor;
+    width: 12vw;
+    margin-left: $standard-margin;
+    margin-right: $standard-margin;
     height: 4vw;
-
 }
 
-.tag    {border-right: 0.5rem solid $secondColor;
+.tag    {border-right: $small-border solid $secondColor;
         border-radius: 5px;
         background-color: $mainColor;
-        padding: 0.5rem;
+        padding: $small-padding;
         color: white;
         font-weight: bold;
         }
