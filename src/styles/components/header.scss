@@ -62,10 +62,11 @@ header h2   {
 @media (max-width: $breakpointTwo) {
  
     header {
-        max-height: 20vh;
+        max-height: 30vh;
     }
     header h1 {
         font-size: $large-size;
+        line-height: 1vw;
     }
     header h2{
         font-size: $medium-size;
