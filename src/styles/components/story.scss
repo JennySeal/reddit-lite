@@ -83,7 +83,7 @@
 {            
             .storyContainer {
                 width: 96vw;
-                text-align: center;
+                text-align: left;
             }  
             
             .story {
@@ -121,11 +121,11 @@
 
 }
 .storyText {
-    width: 90vw;
+    width: 70vw;
     align-items: flex-start;
 }
 .story img {
-    min-width: 40vw;
+    max-width: 20vw;
 } 
 
 .story p {
