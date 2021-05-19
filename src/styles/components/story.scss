@@ -88,7 +88,7 @@
             
             .story {
                 font-size: $small-size;
-                align-items: center;
+                align-items: flex-start;
             }
             
             .storyText {
@@ -96,7 +96,7 @@
                 align-items: center;
             }
             .story img {
-                max-width: 20vw;
+                width: 30vw;
             } 
 
             .story p {
@@ -115,24 +115,24 @@
 
 .story {
     font-size: $small-size;
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     flex-direction: row;
 
 }
 .storyText {
-    width: 70vw;
+    width: 55vw;
     align-items: flex-start;
 }
 .story img {
-    max-width: 20vw;
+    width: 40vw;
 } 
 
 .story p {
-    text-align: center;
+    text-align: left;
 }
 .yellow-button  {
-    width: 30vw;
+    width: 45vw;
 }           
 }
 
