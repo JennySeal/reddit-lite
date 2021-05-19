@@ -54,6 +54,7 @@
 }
 
 .fullStory .comment  {
-    font-size: $small-size;} 
-
+    font-size: $small-size;
+    border-bottom: $standard-border solid $secondColor;
+    font-style: normal} 
 }
