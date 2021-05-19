@@ -1,6 +1,7 @@
-import React, {useCallback, useEffect} from 'react';
+import React, {useCallback, useEffect, Fragment} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import axios from 'axios';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import Header from './components/Header';
 import Story from './components/Story';
@@ -50,18 +51,27 @@ const onOpenPost = useCallback((event) => {
   dispatch(updateSearch(openPostParams))
 },[dispatch, searchTerm]);
 
+const Home = () => (
+  <Fragment>
+<Story onOpenPost={onOpenPost}/>
+  </Fragment>
+)
+
   return (
-    <div className='outerContainer'>
+    <Router>
     <Header/>
     <div className='innerContainer'>
     <div className='sidebars'>
     <SubSidebar/>
     <Sidebar />
     </div>
-    <Story onOpenPost={onOpenPost}/>
+    <Route path='/' component={Home} />
     </div>
     <Footer/>
-    </div>
+    </Router>
   )
 }
+
+
+
 export default App;
