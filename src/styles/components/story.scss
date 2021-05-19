@@ -92,11 +92,11 @@
             }
             
             .storyText {
-                width: 43.5vw;
+                width: 70vw;
                 align-items: center;
             }
             .story img {
-                min-width: 30vw;
+                max-width: 20vw;
             } 
 
             .story p {
@@ -122,10 +122,10 @@
 }
 .storyText {
     width: 90vw;
-    align-items: center;
+    align-items: flex-start;
 }
 .story img {
-    min-width: 60vw;
+    min-width: 40vw;
 } 
 
 .story p {
