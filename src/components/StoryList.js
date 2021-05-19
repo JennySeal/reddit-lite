@@ -14,8 +14,10 @@ console.log(stories);
         <div className="stories">
             {stories.data.data.children.map((story) => 
             <div key={story.data.id} className="story">
+            <div className="small-view">
             <p><img src={story.data.thumbnail} alt="" onError={(e)=>{e.target.onerror = null; e.target.src=story.data.url }}/></p>
-            <StoryPage id={story.data.id} onOpenPost={onOpenPost}/>    
+            <StoryPage id={story.data.id} onOpenPost={onOpenPost}/> 
+            </div>   
             <div className="storyText">
             <h3>{story.data.title}</h3>
             <p>SubReddit: {story.data.subreddit}</p>

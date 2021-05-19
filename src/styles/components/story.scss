@@ -91,20 +91,26 @@
                 font-size: $small-size;
                 align-items: flex-start;
             }
+
+            .small-view {
+                display: flexbox;
+                flex-direction: column;
+                width: 45vw;
+            }
             
             .storyText {
-                width: 70vw;
+                width: 45vw;
                 align-items: center;
             }
             .story img {
-                width: 30vw;
+                width: 40vw;
             } 
 
             .story p {
                 text-align: center;
             }
             .yellow-button  {
-                width: 30vw;
+                width: 35vw;
             }           
 }
 
@@ -120,6 +126,11 @@
     display: flex;
     flex-direction: row;
 
+    .small-view {
+        display: flexbox;
+        flex-direction: column;
+        width: 45vw;
+    }
 }
 .storyText {
     width: 55vw;

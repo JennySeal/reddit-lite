@@ -72,3 +72,17 @@ header h2   {
     }
 
 }
+
+@media (max-width: $breakpointThree) {
+ 
+    header {
+        max-height: 30vh;
+    }
+    header h1 {
+        font-size: $large-size;
+    }
+    header h2{
+        font-size: $small-size;
+    }
+
+}
