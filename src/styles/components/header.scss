@@ -25,7 +25,6 @@ header img  {
     padding: $standard-padding;
     padding-top: 0;
     text-align: right;
-    line-height: normal;
 }
 
 h1   {
@@ -81,7 +80,7 @@ header h2   {
     }
     header h1 {
         font-size: $large-size;
-        line-height: 1vw;
+        line-height: 8vw;
     }
     header h2{
         font-size: $small-size;
