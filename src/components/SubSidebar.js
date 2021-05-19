@@ -22,12 +22,12 @@ const SubSidebar = () => {
         <aside className="asideSub" >
         <p>SubReddits</p>
         <form onSubmit={onSubRedditClick}>
+        <button id="/r/WildLifePhotography/" value="/r/wildlifephotography/" onClick={onSubRedditClick}>/r/Wildlife Photography</button>
         <button id="/r/DesignPorn/" value="/r/DesignPorn/" onClick={onSubRedditClick}>/r/Design Sublime</button>
         <button id="/r/ITookAPicture/" value="/r/ITookAPicture/" onClick={onSubRedditClick}>/r/ITook APicture</button>
         <button id="/Art/" value="r/Art/" onClick={onSubRedditClick}>/r/Artist Sublime</button>
         <button id="/r/EarthPorn/" value="/r/EarthPorn/" onClick={onSubRedditClick}>/r/Earth Sublime</button>
         <button id="/r/SpacePorn/" value="r/SpacePorn/" onClick={onSubRedditClick}>/r/Space Sublime</button>
-        <button id="/r/WildLifePhotography/" value="/r/wildlifephotography/" onClick={onSubRedditClick}>/r/Wildlife Photography</button>
         </form>
         </aside>
     )

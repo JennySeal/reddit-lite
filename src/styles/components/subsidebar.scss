@@ -9,21 +9,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 1vw;
+    margin-right: $standard-margin;
 }
 
 .buttonSub  {
     width: 17vw;
-    margin-right: 1vw;
-    margin-top: 1vw;
-    background-color: $thirdColor;
-    color: $mainColor;
+    margin-left: $standard-margin;
+    padding: $standard-padding 0;
     font-weight: bold;
     border: none;
-    border-right: 1vw solid $mainColor;
     border-radius: 5px;
     font-size: $medium-size;
     word-wrap: break-word;
+    margin-top: $standard-margin;
+    background-color: $thirdColor;
+    color: $mainColor;
+    border-right: 1vw solid $mainColor;
+    
 }
 
 @media (max-width: $breakpointOne) 

@@ -3,6 +3,7 @@ footer   {
     color: $mainColor;
     font-weight: bold;
     font-size: $medium-size;
+    line-height: 1em;
 }
 
 @media (max-width: $breakpointOne) 
@@ -12,3 +13,4 @@ footer   {
         font-size: $small-size;
     }
 }
+

@@ -64,5 +64,11 @@ header h2   {
     header {
         max-height: 20vh;
     }
+    header h1 {
+        font-size: $medium-size;
+    }
+    header h2{
+        font-size: $small-size;
+    }
 
 }

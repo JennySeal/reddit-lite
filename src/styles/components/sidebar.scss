@@ -7,7 +7,7 @@ aside {
     max-width: 19vw;
     display: flexbox;
     flex-direction: column;
-    justify-content: left;
+    justify-content: center;
     margin-right: $standard-margin;
 }
 
@@ -15,15 +15,16 @@ button  {
     width: 17vw;
     margin-left: $standard-margin;
     padding: $standard-padding 0;
-    margin-top: $standard-margin;
-    background-color: $secondColor;
-    color: white;
     font-weight: bold;
     border: none;
-    border-left: $standard-border solid $mainColor;
     border-radius: 5px;
     font-size: $medium-size;
     word-wrap: break-word;
+    margin-top: $standard-margin;
+    background-color: $secondColor;
+    color: white;
+    border-left: $standard-border solid $mainColor;
+    
 }
 
 @media (max-width: $breakpointOne) 
