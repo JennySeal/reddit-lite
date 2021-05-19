@@ -74,9 +74,11 @@
 .tag    {border-right: $small-border solid $secondColor;
         border-radius: 5px;
         background-color: $mainColor;
-        padding: $small-padding;
+        padding: $standard-padding;
         color: white;
         font-weight: bold;
+        width: 12vw;
+        margin-left: $standard-margin;
         }
 
 @media (max-width: $breakpointOne) 
