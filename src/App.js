@@ -23,7 +23,8 @@ const App = () => {
   
 const searchTerm = useSelector(selectSearches);
 const url = `${API_Endpoint}${searchTerm}`;
-const dispatch = useDispatch(); 
+const dispatch = useDispatch();
+ 
   
 const handleFetchStories = useCallback(() => {
   dispatch(fetchingStories);
@@ -37,9 +38,8 @@ return console.error()
 }, [url, dispatch]);
 
 useEffect(() => {
-  localStorage.setItem('history', searchTerm);  
     handleFetchStories();
-    }, [handleFetchStories, searchTerm])
+    }, [handleFetchStories])
  
 
 
@@ -47,9 +47,8 @@ const onOpenPost = useCallback((event) => {
  const openPostParams = `/${event.currentTarget.value}.json`;
   console.log(openPostParams);
   event.preventDefault();
-  localStorage.setItem('history', searchTerm);
   dispatch(updateSearch(openPostParams))
-},[dispatch, searchTerm]);
+},[dispatch]);
 
 const Home = () => (
   <Fragment>
