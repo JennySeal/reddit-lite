@@ -1,0 +1,23 @@
+.home   { 
+        width: 17vw;
+        margin-left: $standard-margin;
+        padding: $small-padding 0;
+        border: 2px solid orangered;
+        border-radius: 5px;
+        font-size: $medium-size;
+        word-wrap: break-word;
+        margin-top: $standard-margin;
+        background-color: white;
+        border-right: 1.5vw solid orangered;
+        text-align: center;
+        color: orangered;
+        font-weight: bold;
+    }
+
+@media (max-width: $breakpointOne) 
+{
+    .home {
+        height: 25%;
+        width: 32%;
+       }
+    }

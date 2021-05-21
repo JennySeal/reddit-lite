@@ -1,7 +1,7 @@
-import React, {useCallback, useEffect, Fragment} from 'react';
+import React, {useCallback, useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import axios from 'axios';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
 
 import Header from './components/Header';
 import Story from './components/Story';
@@ -17,7 +17,6 @@ import {updateSearch} from './features/searches/searchSlice';
 import {selectSearches} from './features/searches/searchSlice';
 
 const API_Endpoint = 'https://www.reddit.com/'
-
 
 const App = () => {
   
@@ -41,8 +40,6 @@ useEffect(() => {
     handleFetchStories();
     }, [handleFetchStories])
  
-
-
 const onOpenPost = useCallback((event) => {
  const openPostParams = `/${event.currentTarget.value}.json`;
   console.log(openPostParams);
@@ -50,11 +47,11 @@ const onOpenPost = useCallback((event) => {
   dispatch(updateSearch(openPostParams))
 },[dispatch]);
 
-const Home = () => (
-  <Fragment>
-<Story onOpenPost={onOpenPost}/>
-  </Fragment>
-)
+const Homepage = () => {
+  return (
+    <Story onOpenPost={onOpenPost}/>
+  )
+}
 
   return (
     <Router>
@@ -64,7 +61,9 @@ const Home = () => (
     <SubSidebar/>
     <Sidebar />
     </div>
-    <Route path='/' component={Home} />
+    <Switch>
+    <Route exact path='/' component={Homepage} />
+    </Switch>
     </div>
     <Footer/>
     </Router>

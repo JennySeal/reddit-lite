@@ -22,6 +22,7 @@ const SubSidebar = () => {
         <aside className="asideSub" >
         <p>SubReddits</p>
         <form onSubmit={onSubRedditClick}>
+        <button className='home' id="Homepage" value="r/MostBeautiful/top/.json?count=25" onClick={onSubRedditClick}>Home</button><br/>
         <button id="/r/WildLifePhotography/" value="/r/wildlifephotography/" onClick={onSubRedditClick}>/r/Wildlife Photography</button>
         <button id="/r/DesignPorn/" value="/r/DesignPorn/" onClick={onSubRedditClick}>/r/Design Sublime</button>
         <button id="/r/ITookAPicture/" value="/r/ITookAPicture/" onClick={onSubRedditClick}>/r/ITook APicture</button>
