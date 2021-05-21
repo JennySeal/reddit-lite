@@ -1,7 +1,7 @@
 import {createSlice} from '@reduxjs/toolkit';
 
 
-const initialState = {searchTerm: "r/MostBeautiful/top/.json?count=25"}
+const initialState = {searchTerm: window.localStorage.getItem('history')} || {searchTerm: "r/MostBeautiful/top/.json?count=25"}
 
 export const searchSlice = createSlice({
     name: 'searches',

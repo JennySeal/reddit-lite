@@ -2,7 +2,7 @@ import React from 'react'
 import {selectStories} from './../features/stories/storiesSlice';
 import {useSelector} from 'react-redux';
 import StoryPage from './StoryPage';
-import {Link} from 'react-router-dom';
+
 
 const StoryList = ({onOpenPost}) => {
 
@@ -21,7 +21,7 @@ console.log(stories);
             {story.data.link_flair_text && <p><span className="tag">{story.data.link_flair_text}</span></p>}
             </div>   
             <div className="storyText">
-            <h3><Link to={`/story/${story.data.id}`}>{story.data.title}</Link></h3>
+            <h3>{story.data.title}</h3>
             <p>SubReddit: {story.data.subreddit}</p>
             <p>Author: {story.data.author}</p>
             <p>Ups: {story.data.ups}</p> 

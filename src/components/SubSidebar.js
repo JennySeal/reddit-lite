@@ -14,7 +14,7 @@ const SubSidebar = () => {
         const subRedditParams = "top/.json?count=25";
         console.log(`${event.currentTarget.value}${subRedditParams}`)
         event.preventDefault();
-        localStorage.setItem('history', searchTerm);
+        window.localStorage.setItem('history', searchTerm);
         dispatch(updateSearch(`${event.currentTarget.value}${subRedditParams}`))
       },[dispatch, searchTerm]);
 

@@ -15,6 +15,7 @@ import './styles/styles.scss'
 import {fetchingStories, gotStories, fetchStoriesFailed} from './features/stories/storiesSlice';
 import {updateSearch} from './features/searches/searchSlice';
 import {selectSearches} from './features/searches/searchSlice';
+import FullStory from './components/FullStory';
 
 const API_Endpoint = 'https://www.reddit.com/'
 
@@ -47,11 +48,14 @@ const onOpenPost = useCallback((event) => {
   dispatch(updateSearch(openPostParams))
 },[dispatch]);
 
+console.log(window.localStorage.getItem('history'));
+
 const Homepage = () => {
   return (
     <Story onOpenPost={onOpenPost}/>
   )
 }
+
 
   return (
     <Router>
@@ -63,6 +67,7 @@ const Homepage = () => {
     </div>
     <Switch>
     <Route exact path='/' component={Homepage} />
+    <Route path={`/story`} component={FullStory}/>
     </Switch>
     </div>
     <Footer/>
