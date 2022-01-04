@@ -89,7 +89,8 @@
 @media (max-width: $breakpointOne) 
 {            
             .storyContainer {
-                width: 96vw;
+                width: 90vw;
+                margin-left: 5vw;
                 text-align: left;
                 padding-left: $standard-padding;
                 font-size: $small-size;
