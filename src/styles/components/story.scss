@@ -51,12 +51,16 @@
     list-style-type: none;
 }
 
+
 .story img  {
     width: 12vw;
     margin-left: $standard-margin;
     margin-right: $standard-margin;
+    height: fit-content;
 
 }
+
+
 
 .yellow-button  {
     background-color: $thirdColor;

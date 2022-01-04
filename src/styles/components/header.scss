@@ -3,13 +3,13 @@ header  {
     color: white;
     padding: $small-padding;
     text-align: left;
-    border-left: $standard-border solid $secondColor;
-    border-right: $standard-border solid $thirdColor;
-    border-bottom: $standard-border solid white;
+    margin-left: 5vw;
+    border-bottom: none;
     max-height: 27vh;
-    width: 95vw;
+    width: 90vw;
     display: inline-flex;
     justify-content: space-between;
+ 
 }
 
 header img  {
@@ -31,10 +31,12 @@ header img  {
 h1   {
     font-size: $xl-size;
     font-family: 'Lobster';
+    margin-bottom: 0;
 }
 
 header h2   {
     font-size: $large-size;
+    margin-top: 0;
 }
 
 
