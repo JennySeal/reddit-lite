@@ -62,7 +62,7 @@ const Homepage = () => {
     <Header/>
     <div className='innerContainer'>
     <div className='sidebars'>
-    <SubSidebar/>
+    <SubSidebar/> 
     <Sidebar />
     </div>
     <Switch>
