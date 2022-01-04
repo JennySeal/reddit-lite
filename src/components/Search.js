@@ -9,14 +9,15 @@ const Search = () => {
 
     const handleSearchSubmit = useCallback((e) => {
         e.preventDefault();
-        dispatch(updateSearch(search));
+        dispatch(updateSearch(search))
+        
     },[dispatch, search])
 
     return (
         <div>
         <form className="search" onSubmit={handleSearchSubmit}>
         <VscSearch className="searchIcon"/>
-        <input type="text" autoComplete="off" autoFocus={true} id="search" onInput={((e)=>setSearch(`search.json?limit=25&q=${e.currentTarget.value}`))}/>
+        <input type="text" autoComplete="off" autoFocus={true} id="search" onInput={((e)=>setSearch(`search.json?limit=24&q=${e.currentTarget.value}`))}/>
         </form>
         </div>
             )
