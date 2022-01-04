@@ -25,13 +25,11 @@ a   {text-decoration: none;
 
 .innerContainer {
     margin-bottom: $large-margin;
-    min-height: 70vh;
-    width: 96vw;
-    margin-right: $standard-margin;
+    width: 90vw;
+    margin-left: 5vw;
     display: inline-flex;
-    border-left: $standard-border solid $secondColor;
-    border-right: $standard-border solid $thirdColor;
     background-color: white;
+
 }
 
 
