@@ -13,7 +13,7 @@ console.log(stories);
         <>
         <p>Here are some Reddit Stories for you</p>
         <div className="stories">
-            {stories.data.data.children.map((story) => 
+            {stories.data.data.children.slice(2, 26).map((story) => 
             <div key={story.data.id} className="story">
             <div className="small-view">
             <p><img src={story.data.thumbnail} alt="" onError={(e)=>{e.target.onerror = null; e.target.src=story.data.url }}/></p>

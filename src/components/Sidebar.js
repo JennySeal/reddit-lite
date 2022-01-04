@@ -8,7 +8,7 @@ const Sidebar = () => {
     const dispatch = useDispatch();
 
     const onArtistClick = useCallback((event) => {
-        const artistSearchParams = "search.json?limit=30&q=";
+        const artistSearchParams = "search.json?limit=24&q=";
         event.preventDefault();
         localStorage.setItem('history', searchTerm)
         dispatch(updateSearch(`${artistSearchParams}${event.currentTarget.value}`))

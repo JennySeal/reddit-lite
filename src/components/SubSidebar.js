@@ -11,7 +11,7 @@ const SubSidebar = () => {
     const dispatch = useDispatch();
 
     const onSubRedditClick = useCallback((event) => {
-        const subRedditParams = "top/.json?count=25";
+        const subRedditParams = ".json?count=24";
         console.log(`${event.currentTarget.value}${subRedditParams}`)
         event.preventDefault();
         window.localStorage.setItem('history', searchTerm);
@@ -22,7 +22,7 @@ const SubSidebar = () => {
         <aside className="asideSub" >
         <p>SubReddits</p>
         <form onSubmit={onSubRedditClick}>
-        <button className='home' id="Homepage" value="r/MostBeautiful/top/.json?count=25" onClick={onSubRedditClick}>Home</button><br/>
+        <button className='home' id="Homepage" value="r/MostBeautiful/" onClick={onSubRedditClick}>Home</button><br/>
         <button id="/r/WildLifePhotography/" value="/r/wildlifephotography/" onClick={onSubRedditClick}>/r/Wildlife Photography</button>
         <button id="/r/DesignPorn/" value="/r/DesignPorn/" onClick={onSubRedditClick}>/r/Design Sublime</button>
         <button id="/r/ITookAPicture/" value="/r/ITookAPicture/" onClick={onSubRedditClick}>/r/ITook APicture</button>
