@@ -1,7 +1,9 @@
 *   {font-family: 'Roboto Slab', sans-serif;
     word-wrap: break-word;
 }
-
+body {
+    margin: 0;
+}
 html {
     font-size: 62.5%;
     margin: 0;
@@ -15,7 +17,7 @@ a   {text-decoration: none;
 }
 
 .outerContainer {
-    width: 98vw;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
