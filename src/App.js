@@ -5,7 +5,6 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import Header from './components/Header';
 import Story from './components/Story';
-import Sidebar from './components/Sidebar';
 import SubSidebar from './components/SubSidebar';
 import Footer from './components/Footer';
 
@@ -61,10 +60,7 @@ const Homepage = () => {
     <Router>
     <Header/>
     <div className='innerContainer'>
-    <div className='sidebars'>
-    <SubSidebar/> 
-    <Sidebar />
-    </div>
+    <SubSidebar />
     <Switch>
     <Route exact path='/' component={Homepage} />
     <Route path={`/story`} component={FullStory}/>
