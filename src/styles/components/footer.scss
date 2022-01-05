@@ -4,6 +4,12 @@ footer   {
     font-weight: bold;
     font-size: $small-size;
     line-height: 1em;
+    width: 70vw;
+    margin-left: 25vw;
+}
+
+footer p {
+    margin-left: 5vw;
 }
 
 @media (max-width: $breakpointOne) 

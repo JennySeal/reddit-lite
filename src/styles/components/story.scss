@@ -1,10 +1,12 @@
 .storyContainer {
-    width: 75vw;
+    width: 90vw;
     font-size: $medium-size;
     display: flex;
     flex-direction: column;
     font-weight: bold;
     justify-items: space-around;
+    margin-top: 20vh;
+    
 }
 
 .stories {
@@ -14,13 +16,13 @@
     justify-content: space-around;
     flex-wrap:wrap;
     flex-direction: row;
+    margin-left: 20vw;
     }
 
 
 .story  {   
     display: flex;
     flex-direction: column;
-    margin: $standard-margin;
     padding: $small-padding;
     line-height: normal;
     box-shadow: 0 0 1vw $mainColor;
@@ -136,6 +138,13 @@
     flex-wrap: nowrap;
 }
 
+.storyContainer {
+    margin-top: 40vh;
+}
+
+.stories {
+    margin-left: 5vw;
+}
 .story {
     font-size: $small-size;
     align-items: flex-start;
@@ -145,7 +154,7 @@
     .small-view {
         display: flexbox;
         flex-direction: column;
-        width: 45vw;
+        width: 90vw;
     }
 }
 .storyText {
@@ -164,3 +173,6 @@
     height: 8vw;}           
 }
 
+#topLine {
+    margin-left: 5vw;
+}

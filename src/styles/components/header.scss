@@ -4,11 +4,13 @@ header  {
     padding: $small-padding;
     text-align: left;
     margin-left: 5vw;
+    margin-top: 0vh;
     border-bottom: none;
     max-height: 27vh;
     width: 90vw;
     display: inline-flex;
     justify-content: space-between;
+    position: fixed;
  
 }
 
@@ -80,6 +82,7 @@ header h2   {
  
     header {
         max-height: 30vh;
+        margin-bottom: 0;
     }
     header h1 {
         font-size: $large-size;

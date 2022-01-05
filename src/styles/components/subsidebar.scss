@@ -4,13 +4,16 @@
         font-weight: bold;}
 
 .asideSub {
-    max-width: 19vw;
+    width: 20vw;
     display: flexbox;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-right: $standard-margin;
-}
+    top: 30vh;
+    max-height: 25vh;
+    overflow-y: scroll;
+    }
 
 .buttonSub  {
     width: 17vw;
@@ -32,10 +35,14 @@
 {
     .asideSub {
         flex-direction: row;
-        max-width: 96vw;
+        width: 90vw;
         justify-content: space-between;
         flex-wrap: nowrap;
-    } 
+        max-height: fit-content;
+        top: 19vh;
+        background-color: white;
+        margin-top: 0;
+        } 
     .buttonSub {
         font-size: $small-size;
         height: 25%;

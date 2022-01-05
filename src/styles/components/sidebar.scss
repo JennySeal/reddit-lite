@@ -5,10 +5,16 @@ aside p {font-size: $medium-size;
 
 aside {
     width: 19vw;
+    min-height: 60vh;
     display: flexbox;
     flex-direction: column;
     justify-content: center;
     margin-right: $standard-margin;
+    position: fixed;
+    top: 28vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
 }
 
 button  {
@@ -35,6 +41,7 @@ button  {
         margin-left: 5vw;
         justify-content: space-between;
         flex-wrap: nowrap;
+        min-height: 0vh;
     } 
     button {
         font-size: $small-size;
