@@ -11,7 +11,7 @@ console.log(stories);
 
     return (
         <>
-        <p>Here are some Reddit Stories for you</p>
+        <p id="topLine">Here are some Reddit Stories for you</p>
         <div className="stories">
             {stories.data.data.children.slice(2, 26).map((story) => 
             <div key={story.data.id} className="story">
